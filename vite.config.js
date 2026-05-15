@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/luxurys-landing-page/',
+  base: process.env.VERCEL ? '/' : '/luxurys-landing-page/',
   plugins: [
     react(),
     tailwindcss(),

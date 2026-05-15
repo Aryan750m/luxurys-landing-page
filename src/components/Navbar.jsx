@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-black/60 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <motion.div 
+        <motion.div
           className="flex items-center gap-3"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
@@ -27,13 +27,14 @@ function Navbar() {
           <motion.a href="#location" className="transition hover:text-yellow-400" whileHover={{ y: -2 }}>Location</motion.a>
         </div>
 
-        <motion.button 
+        <motion.a
+          href="#contact"
           className="bg-yellow-400 text-black px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaPhoneAlt /> Enquire
-        </motion.button>
+        </motion.a>
       </div>
     </nav>
   );

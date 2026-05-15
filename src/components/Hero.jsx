@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { scrollToContact } from "../utils/contactActions";
 
 function Hero() {
   return (
@@ -34,14 +35,26 @@ function Hero() {
             >
               A signature residential destination on 38 acres in Panvel, offering 2 to 4 BHK homes with resort-style amenities, lush landscapes, and excellent connectivity.
             </motion.p>
-            <motion.a
-              href="#contact"
-              className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:shadow-[0_0_28px_rgba(250,204,21,0.42)] transition-all duration-300"
-              whileHover={{ scale: 1.04, y: -3 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              Pre-Register Now
-            </motion.a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.button
+                type="button"
+                onClick={scrollToContact}
+                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:shadow-[0_0_28px_rgba(250,204,21,0.42)] transition-all duration-300"
+                whileHover={{ scale: 1.04, y: -3 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Pre-Register Now
+              </motion.button>
+              <motion.button
+                type="button"
+                onClick={scrollToContact}
+                className="border border-white/20 text-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                whileHover={{ scale: 1.04, y: -3 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Request Call Back
+              </motion.button>
+            </div>
           </div>
 
           <motion.div
@@ -68,6 +81,15 @@ function Hero() {
                 <p className="text-yellow-400 font-semibold">Luxury 2, 2.5, 3 & 4 BHK Starts</p>
                 <p className="text-3xl font-black mt-2">INR 89 Lakhs* Onwards</p>
               </div>
+              <motion.button
+                type="button"
+                onClick={scrollToContact}
+                className="w-full bg-yellow-400 text-black px-6 py-4 rounded-full font-semibold hover:shadow-[0_0_28px_rgba(250,204,21,0.42)] transition-all duration-300"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Enquire Now
+              </motion.button>
               <div className="grid grid-cols-3 gap-3 text-center text-xs text-gray-400">
                 <div className="rounded-3xl bg-white/5 p-4">Instant Call Back</div>
                 <div className="rounded-3xl bg-white/5 p-4">Free Site Visit</div>

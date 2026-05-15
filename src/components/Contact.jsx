@@ -4,6 +4,7 @@ function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert("Thank you! Your pre-registration request has been received. Our team will contact you shortly.");
+    event.currentTarget.reset();
   };
 
   return (
@@ -20,12 +21,12 @@ function Contact() {
           <h2 className="text-5xl font-black mb-10">Pre-Register Here for Best Offers</h2>
           <form onSubmit={handleSubmit} className="space-y-5 text-left">
             <div>
-              <label className="text-sm text-gray-300 mb-2 block">Your Name</label>
-              <input type="text" placeholder="Enter Your Name here..." className="w-full rounded-3xl border border-white/10 bg-black/70 px-5 py-4 text-white placeholder:text-gray-500 focus:border-yellow-400 focus:outline-none transition" />
+              <label htmlFor="contact-name" className="text-sm text-gray-300 mb-2 block">Your Name</label>
+              <input id="contact-name" name="name" type="text" required placeholder="Enter Your Name here..." className="w-full rounded-3xl border border-white/10 bg-black/70 px-5 py-4 text-white placeholder:text-gray-500 focus:border-yellow-400 focus:outline-none transition" />
             </div>
             <div>
-              <label className="text-sm text-gray-300 mb-2 block">Phone Number</label>
-              <input type="tel" placeholder="+91 Phone Number" className="w-full rounded-3xl border border-white/10 bg-black/70 px-5 py-4 text-white placeholder:text-gray-500 focus:border-yellow-400 focus:outline-none transition" />
+              <label htmlFor="contact-phone" className="text-sm text-gray-300 mb-2 block">Phone Number</label>
+              <input id="contact-phone" name="phone" type="tel" required placeholder="+91 Phone Number" className="w-full rounded-3xl border border-white/10 bg-black/70 px-5 py-4 text-white placeholder:text-gray-500 focus:border-yellow-400 focus:outline-none transition" />
             </div>
             <motion.button
               type="submit"

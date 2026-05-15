@@ -1,5 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { scrollToContact } from "../utils/contactActions";
 
 function Navbar() {
   return (
@@ -27,14 +28,15 @@ function Navbar() {
           <motion.a href="#location" className="transition hover:text-yellow-400" whileHover={{ y: -2 }}>Location</motion.a>
         </div>
 
-        <motion.a
-          href="#contact"
+        <motion.button
+          type="button"
+          onClick={scrollToContact}
           className="bg-yellow-400 text-black px-5 py-3 rounded-full flex items-center gap-2 font-semibold text-sm"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
           <FaPhoneAlt /> Enquire
-        </motion.a>
+        </motion.button>
       </div>
     </nav>
   );
